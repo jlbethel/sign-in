@@ -1,10 +1,16 @@
 <a ui-sref="home"><button type="button">Home</button></a>
 <h3>Welcome</h3>
 
+<div class="row" id="search-bar" ng-show="allStudents.length">
+  <form ng-model="search" role="form">
+    <input ng-model="search" type="text" class="form-control" placeholder="Search">
+  </form>
+</div>
+
 <div ng-show="studentsHere.length">
   <h3>Students Present:</h3>
   <ul>
-    <li ng-repeat="item in studentsHere">
+    <li ng-repeat="item in filtered = (studentsHere | filter:search )">
       {{ item }}
     </li>
   </ul>
@@ -13,7 +19,7 @@
 <div ng-show="studentsGone.length">
   <h3>Students Gone:</h3>
   <ul>
-    <li ng-repeat="item in studentsGone">
+    <li ng-repeat="item in filtered = (studentsGone | filter:search )">
       {{ item }}
     </li>
   </ul>

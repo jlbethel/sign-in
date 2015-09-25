@@ -6,6 +6,11 @@
   <h3 ng-show="allStudents.length">Students:</h3>
     <ul>
       <li ng-repeat="item in allStudents">
-        {{ item}} <button ng-click="StudentsFactory.signOut(item)">Sign Out</button> <button ng-click="StudentsFactory.signIn(item)">Sign In</button>
+        <br>
+        {{ item }}
+        <button class="btn btn-success" ng-if="studentsHere.indexOf(item) != -1" ng-click="StudentsFactory.signOut(item)">Sign Out</button>
+        <button class="btn btn-warning" ng-if="studentsGone.indexOf(item) != -1" ng-click="StudentsFactory.signIn(item)">Sign In</button>
+        <br>
       </li>
+
     </ul>

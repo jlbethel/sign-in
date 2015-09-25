@@ -5,7 +5,7 @@
 
 ##Description
 
-An app that runs in your browser, allowing students to sign in and out of class, and teachers to check which students are present.
+An app that runs in your browser allowing students to sign in and out of class, and teachers to check which students are present.
 
 ##Setup
 
