@@ -42,5 +42,10 @@ classroom.factory('StudentsFactory', function StudentsFactory() {
     factory.studentsGone.push(student);
   }
 
+  factory.addStudent = function() {
+    factory.allStudents.push(factory.studentName);
+    factory.studentsGone.push(factory.studentName);
+    factory.studentName = null;
+  }
   return factory;
 });
