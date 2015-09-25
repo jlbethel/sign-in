@@ -3,9 +3,9 @@
 <h1>Students sign in below</h3>
 
 
-  <h3 ng-show="allStudents.">Students:</h3>
+  <h3 ng-show="allStudents.length">Students:</h3>
     <ul>
       <li ng-repeat="item in allStudents">
-        {{ item.name }}
+        {{ item}} <button ng-click="StudentsFactory.signOut(item)">Sign Out</button> <button ng-click="StudentsFactory.signIn(item)">Sign In</button>
       </li>
     </ul>

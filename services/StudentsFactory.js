@@ -1,38 +1,45 @@
 classroom.factory('StudentsFactory', function StudentsFactory() {
   var factory = {};
   factory.allStudents = [
-    { name: 'Rose Tyler', id: 1 },
-    { name: 'Jack Harkness', id: 2 },
-    { name: 'Martha Jones', id: 3 },
-    { name: 'Mickey Smith', id: 4 },
-    { name: 'Donna Nobel', id: 5 },
-    { name: 'Amy Pond', id: 6 },
-    { name: 'Rory Williams', id: 7 },
-    { name: 'River Song', id: 8 },
-    { name: 'Clara Oswald', id: 9 },
-    { name: 'Melody Pond', id: 10 }
+    'Rose Tyler',
+    'Jack Harkness',
+    'Martha Jones',
+    'Mickey Smith',
+    'Donna Nobel',
+    'Amy Pond',
+    'Rory Williams',
+    'River Song',
+    'Clara Oswald',
+    'Melody Pond'
     ];
 
   factory.studentsHere = [
-    { name: 'Rose Tyler', id: 1 },
-    { name: 'Jack Harkness', id: 2 },
-    { name: 'Martha Jones', id: 3 },
-    { name: 'Mickey Smith', id: 4 },
-    { name: 'Donna Nobel', id: 5 },
-    { name: 'Amy Pond', id: 6 }
+    'Rose Tyler',
+    'Jack Harkness',
+    'Martha Jones',
+    'Mickey Smith',
+    'Donna Nobel',
+    'Amy Pond'
   ];
 
   factory.studentsGone = [
-    { name: 'Rory Williams', id: 7 },
-    { name: 'River Song', id: 8 },
-    { name: 'Clara Oswald', id: 9 },
-    { name: 'Melody Pond', id: 10 }
+    'Rory Williams',
+    'River Song',
+    'Clara Oswald',
+    'Melody Pond'
   ];
+
 
   factory.signIn = function(student) {
     var index = factory.studentsGone.indexOf(student);
     var studentToMove = factory.studentsGone.splice(index, 1);
-    factory.studentsHere.push(studentToMove);
+    factory.studentsHere.push(student);
+  }
+
+  factory.signOut = function(student) {
+    var index= factory.studentsHere.indexOf(student)
+    var studentToMove = factory.studentsHere.splice(index, 1);
+    factory.studentsGone.push(student);
   }
 
   return factory;
