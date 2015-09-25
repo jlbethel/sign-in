@@ -6,9 +6,8 @@ signIn.config(function($stateProvider, $urlRouterProvider) {
     templateUrl: "partials/home.html"
   });
 
-  $stateProvider.state('students.html', {
+  $stateProvider.state('students', {
     url: "/students",
     templateUrl: "partials/students.html",
-    controller: "SutdentsCtrl"
   });
 });
