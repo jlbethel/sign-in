@@ -1,0 +1,19 @@
+<h3>Welcome Doctor,</h3>
+
+<div ng-show="studentsHere.length">
+  <h3>Students Present:</h3>
+  <ul>
+    <li ng-repeat="item in studentsHere">
+      {{ item.name }}
+    </li>
+  </ul>
+</div>
+
+<div ng-show="studentsGone.length">
+  <h3>Students Gone:</h3>
+  <ul>
+    <li ng-repeat="item in studentsGone">
+      {{ item.name }}
+    </li>
+  </ul>
+</div>

@@ -11,4 +11,10 @@ classroom.config(function($stateProvider, $urlRouterProvider) {
     templateUrl: "partials/students.html",
     controller: "StudentsCtrl"
   });
+
+  $stateProvider.state('teacher', {
+    url: "/teacher",
+    templateUrl: "partials/teacher.html",
+    controller: "StudentsCtrl"
+  });
 });
