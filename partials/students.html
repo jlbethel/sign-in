@@ -1,1 +1,9 @@
 <h1>Students sign in below</h3>
+
+
+  <h3 ng-show="allStudents.length">Students:</h3>
+    <ul>
+      <li ng-repeat="item in allStudents">
+        {{ item.name }}
+      </li>
+    </ul>
