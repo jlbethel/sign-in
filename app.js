@@ -1,6 +1,6 @@
-var signIn = angular.module('signIn', ['ui.router']);
+var classroom = angular.module('classroom', ['ui.router']);
 
-signIn.config(function($stateProvider, $urlRouterProvider) {
+classroom.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider.state('home', {
     url:"",
     templateUrl: "partials/home.html"

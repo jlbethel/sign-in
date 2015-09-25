@@ -1,6 +1,8 @@
-signIn.factory('StudentsFactory', function StudentsFactory() {
+classroom.factory('StudentsFactory', function StudentsFactory() {
   var factory = {};
-  factory.students = [];
+  factory.allStudents = [];
+
+
 
   return factory;
 });
